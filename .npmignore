@@ -1,4 +1,2 @@
 *
-!dist/**
-!types/**
-!index.js
+!src/**

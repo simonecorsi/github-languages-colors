@@ -1,28 +1,26 @@
 name: Release
 
-on: workflow_dispatch
+on: 
+  workflow_dispatch:
+  schedule:
+    - cron: '00 00 * * *'
 
 jobs:
-  test:
-    name: Run tests
-    uses: ./.github/workflows/test.yml
-
   release:
-    needs: [test]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/setup-node@v3
         with:
-          node-version: 16
+          node-version: 18
       - uses: actions/checkout@v3
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Update NPM
-        run: npm i -g npm@8.3.1 # avoid npm@8.4 win32 bug
-
       - name: Install dependencies
         run: npm i
+
+      - name: Build
+        run: npm run build
 
       - name: Semantic release
         uses: codfish/semantic-release-action@v1

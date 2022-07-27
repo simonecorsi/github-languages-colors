@@ -1,42 +1,68 @@
-# {{ PROJECT_NAME }}
+# github-languages-colors
 
 <!-- PROJECT SHIELDS -->
 
-<!-- ![tests](https://github.com/simonecorsi/{{ PROJECT_NAME }}/workflows/test/badge.svg) -->
+<!-- ![tests](https://github.com/simonecorsi/github-languages-colors/workflows/test/badge.svg) -->
 
 <!-- toc -->
 
-- [About The Project](#about-the-project)
+- [About](#about)
 - [Installation](#installation)
 - [Usage](#usage)
-- [Options](#options)
+  - [Javascript/Typescript](#javascripttypescript)
+  - [JSON](#json)
+  - [CSS](#css)
 - [Contributing](#contributing)
 - [License](#license)
 - [Contact](#contact)
 
 <!-- tocstop -->
 
-## About The Project
+## About
 
-> Fetch all the starred repositories for a GitHub user
+> 🎨 This simple packages exposes github language colors in js, json and css and updates daily from github definitions!
 
-This packages helps in retrieving all the starred repositories for a given github user
+Have you ever needed for your side project to show languages with cool colors like github does? Fear no more, this package exposes them in JS (both CommonJS and ESM), JSON and CSS!
+
+The definitions are updated daily!
 
 <!-- GETTING STARTED -->
 
 ## Installation
 
 ```sh
-npm i --save {{ PROJECT_NAME }}
+npm i --save @scdev/github-languages-colors
 # OR
-yarn add {{ PROJECT_NAME }}
+yarn add @scdev/github-languages-colors
 ```
 
 <!-- USAGE EXAMPLES -->
 
 ## Usage
 
-## Options
+### Javascript/Typescript
+
+```js
+import ghColors from '@scdev/github-languages-colors';
+// OR
+const ghColors = require('@scdev/github-languages-colors');
+```
+
+**NB**: Language are the same as returned from Github APIs and as seen in the website, this to easily retrieve them programmatically, eg: js is JavaScript.
+
+### JSON
+
+There is also a JSON file if you want to use it in other languages in: `src/index.json`
+
+### CSS
+
+**NB**: To maintain original names as stated above we added prefixes to avoid unconventional classNames (eg: starting with numbers)
+
+Two files are generated, so you can include only the one you need:
+
+- [`gh-colors.css`](./src/gh-colors.css)
+- [`gh-background.css`](./src/gh-background.css)
+- [`gh-variables.css`](./src/gh-variables.css)
 
 <!-- CONTRIBUTING -->
 

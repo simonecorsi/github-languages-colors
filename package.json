@@ -1,23 +1,27 @@
 {
-  "name": "{{ PROJECT_NAME }}",
+  "name": "@scdev/github-languages-colors",
   "version": "1.0.0-0",
-  "description": "{{ PROJECT_DESCRIPTION }}",
+  "description": "This simple packages exposes github language colors in js, json and css and updates daily from github definitions!",
   "author": "Simone Corsi <simonecorsi.dev@gmail.com>",
   "license": "MIT",
   "main": "./index.js",
-  "types": "./index.d.ts",
+  "type": "module",
+  "exports": {
+    "require": "./src/index.cjs",
+    "default": "./src/index.mjs",
+    "node": "./src/index.mjs",
+    "import": "./src/index.mjs"
+  },
   "repository": {
-    "url": "https://github.com/simonecorsi/{{ PROJECT_NAME }}"
+    "url": "https://github.com/simonecorsi/github-languages-colors"
   },
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org"
   },
   "scripts": {
-    "types": "tsc --allowJs -d --emitDeclarationOnly index.js",
-    "test": "tap",
-    "coverage": "tap --coverage-report=html",
-    "prepare": "node prepare.js || echo 'Skipping prepare'"
+    "prepare": "node prepare.js || echo 'Skipping prepare'",
+    "build": "node build/index.mjs"
   },
   "keywords": [
     "github",
@@ -54,6 +58,11 @@
     "nyc": "^15.1.0",
     "prettier": "^2.7.1",
     "semantic-release": "^19.0.3",
-    "tap": "^16.3.0"
+    "slug": "^5.3.0",
+    "tap": "^16.3.0",
+    "yaml": "^2.1.1"
+  },
+  "volta": {
+    "node": "18.7.0"
   }
 }
