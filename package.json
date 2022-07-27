@@ -1,6 +1,6 @@
 {
   "name": "@scdev/github-languages-colors",
-  "version": "1.0.0-0",
+  "version": "1.0.0",
   "description": "This simple packages exposes github language colors in js, json and css and updates daily from github definitions!",
   "author": "Simone Corsi <simonecorsi.dev@gmail.com>",
   "license": "MIT",
