@@ -57,7 +57,7 @@
     "markdown-toc": "^1.2.0",
     "nyc": "^15.1.0",
     "prettier": "^2.7.1",
-    "semantic-release": "^19.0.3",
+    "semantic-release": "^20.0.3",
     "slug": "^6.0.0",
     "tap": "^16.3.0",
     "yaml": "^2.1.1"
